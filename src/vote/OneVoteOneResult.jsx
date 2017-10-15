@@ -5,26 +5,28 @@ import VoteResult from './VoteResult.jsx';
 class OneVoteOneResult extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { displayForm: true }
-		this.toggleView = this.toggleView.bind(this);
+		this.state = { activeVote: '',
+					   voteCast: false }
+		this.activateVote = this.activateVote.bind(this);
 	}
 
-	toggleView = () => {
+	activateVote(id) {
 		this.setState({
-			displayForm: !this.state.displayForm
+			voteCast: !this.state.voteCast,
+			activeVote: id
 		});
 	}
 
 	displayFormOrResult () {
-		if (this.state.displayForm)
-			return <VoteForm/>
+		if (!this.state.voteCast)
+			return <VoteForm activateVote={this.activateVote} />
 		else
-			return <VoteResult/>
+			return <VoteResult />
 	}
 
 	render () {
 		return (
-			<div>
+			<div className='oneVoteOneResult'>
 				{ this.displayFormOrResult() }
 			</div>
 		);

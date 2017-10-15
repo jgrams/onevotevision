@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import OneVoteOneResult from './vote/OneVoteOneResult.jsx'
-import './App.css';
+import OneVoteOneResult from './vote/OneVoteOneResult.jsx';
+import './static/css/App.css';
 
 class App extends Component {
   render() {

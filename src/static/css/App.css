@@ -1,0 +1,83 @@
+.oneVoteOneResult {
+  font-size: 1.5em;
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  margin: auto;
+}
+
+.voteButtonContainer {
+  min-height:10vh;
+  margin-bottom:1vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.voteFormPrompt {
+  padding: 20px;
+  color: #1c2507; 
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 1.5em; 
+  font-weight: 375; 
+  line-height: 1.7em; 
+  margin: 0 0 5px;
+}
+
+/* css from https://codepen.io/wintr/pen/wWoRVW */
+button.voteButton {
+  color:#644cad;
+  text-decoration:none;
+  -webkit-transition:0.3s all ease;
+  transition:0.3s ease all;
+}
+button.voteButton:hover {
+    color:#FFF;
+}
+button.voteButton:focus {
+    color:#FFF;
+}
+
+.voteButton {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 270px;
+  font-weight: bold;
+  padding: 14px 0px;
+  border: 3px solid #644cad;
+  border-radius: 2px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+.voteButton:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #644cad;
+  z-index: -1;
+}
+.voteButton:hover:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.voteButton:focus:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
