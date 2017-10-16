@@ -1,14 +1,17 @@
+h1 {
+  color:;
+}
+
 .oneVoteOneResult {
-  font-size: 1.5em;
+  font-size: 3em;
   text-align: center;
-  max-width: 450px;
+  max-width: 800px;
   width: 100%;
   margin: auto;
 }
 
 .voteButtonContainer {
-  min-height:10vh;
-  margin-bottom:1vh;
+  margin-bottom:.25em;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -39,12 +42,13 @@ button.voteButton:focus {
 }
 
 .voteButton {
-  font-size: 18px;
-  letter-spacing: 2px;
+  font-size: 1em;
+  letter-spacing: .07em;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
-  width: 270px;
+  width: 7em;
+  height: 3em;
   font-weight: bold;
   padding: 14px 0px;
   border: 3px solid #644cad;
