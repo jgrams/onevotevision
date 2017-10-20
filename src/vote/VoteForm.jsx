@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import VoteButton from './VoteButton.jsx'
 
 class VoteForm extends Component {
 	constructor(props) {
 		super(props);
 		this.state = { voteOptions: [{id: 1, value: "agree", text: "Agree"}, 
-		               				       {id: 2, value: "disagree", text: "Disagree"}] };
+		               				 {id: 2, value: "disagree", text: "Disagree"}] };
 		this.activateVote = this.activateVote.bind(this);
 	}
 
@@ -21,13 +22,9 @@ class VoteForm extends Component {
 				<div className="voteButtons">
 					{this.state.voteOptions.map(voteOption=> {
 						return (
-							<div className="voteButtonContainer" key={voteOption.id}>
-								<button onClick={this.activateVote} 
-								        value={voteOption.value}
-								        className="voteButton" >
-									{voteOption.text}
-								</button>
-							</div>
+							<VoteButton key={voteOption.id}
+										activateVote={this.activateVote} 
+								        voteOption={voteOption} />
 							);
 					})}
 				</div>

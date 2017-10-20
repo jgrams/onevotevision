@@ -5,23 +5,21 @@ import VoteResult from './VoteResult.jsx';
 class OneVoteOneResult extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { activeVote: '',
-					   voteCast: false }
+		this.state = { activeVote: '' }
 		this.activateVote = this.activateVote.bind(this);
 	}
 
-	activateVote(id) {
+	activateVote(e) {
 		this.setState({
-			voteCast: !this.state.voteCast,
-			activeVote: id
+			activeVote: 'asdfasdf'
 		});
 	}
 
 	displayFormOrResult () {
-		if (!this.state.voteCast)
+		if (this.state.activeVote === '')
 			return <VoteForm activateVote={this.activateVote} />
 		else
-			return <VoteResult />
+			return <VoteResult vote={this.activeVote}/>
 	}
 
 	render () {
