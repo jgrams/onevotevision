@@ -1,5 +1,5 @@
-h1 {
-  color:;
+:root {
+  --vote-button-color: #644cad;
 }
 
 .oneVoteOneResult {
@@ -22,14 +22,14 @@ h1 {
   color: #1c2507; 
   font-family: 'Open Sans', sans-serif; 
   font-size: 1.5em; 
-  font-weight: 375; 
+  font-weight: 450; 
   line-height: 1.7em; 
   margin: 0 0 5px;
 }
 
 /* css from https://codepen.io/wintr/pen/wWoRVW */
 button.voteButton {
-  color:#644cad;
+  color:var(--vote-button-color);
   text-decoration:none;
   -webkit-transition:0.3s all ease;
   transition:0.3s ease all;
@@ -39,6 +39,23 @@ button.voteButton:hover {
 }
 button.voteButton:focus {
     color:#FFF;
+}
+
+.shareContainer {
+  display: flex;
+  text-align: right;
+}
+
+.shareText {
+  width: 75%;
+}
+
+.shareIcon {
+  
+}
+
+.iconImage {
+  max-width: 134px;
 }
 
 .voteButton {
@@ -51,7 +68,7 @@ button.voteButton:focus {
   height: 3em;
   font-weight: bold;
   padding: 14px 0px;
-  border: 3px solid #644cad;
+  border: 3px solid var(--vote-button-color);
   border-radius: 2px;
   position: relative;
   background: rgba(255, 255, 255, 0.1);
@@ -68,7 +85,7 @@ button.voteButton:focus {
   bottom: 0;
   opacity: 0;
   content: '';
-  background-color: #644cad;
+  background-color: var(--vote-button-color);
   z-index: -1;
 }
 .voteButton:hover:before {
