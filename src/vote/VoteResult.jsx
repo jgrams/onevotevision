@@ -16,7 +16,7 @@ class VoteResult extends Component {
 				<h3>Almost everyone agrees with you.</h3>
 				<div className="shareContainer">
 					<div className="shareText">
-						1 vote. <br/>Share your correct opinion.
+						1 vote.<br/>Share your opinion.
 					</div>
 					<div className="shareIcons">
 						{this.state.shareIcons.map(icon => {

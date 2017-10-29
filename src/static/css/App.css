@@ -1,9 +1,10 @@
 :root {
   --vote-button-color: #644cad;
+  --white: #FFF;
 }
 
 .oneVoteOneResult {
-  font-size: 3em;
+  font-size: 4rem;
   text-align: center;
   max-width: 800px;
   width: 100%;
@@ -35,27 +36,15 @@ button.voteButton {
   transition:0.3s ease all;
 }
 button.voteButton:hover {
-    color:#FFF;
+    color:var(--white);
 }
 button.voteButton:focus {
-    color:#FFF;
+    color:var(--white);
 }
 
 .shareContainer {
   display: flex;
   text-align: right;
-}
-
-.shareText {
-  width: 75%;
-}
-
-.shareIcon {
-  
-}
-
-.iconImage {
-  max-width: 134px;
 }
 
 .voteButton {
@@ -101,4 +90,16 @@ button.voteButton:focus {
   left: 0;
   right: 0;
   opacity: 1;
+}
+
+.shareIcons{
+  display:inline-flex;
+}
+
+.twitterIcon:hover{
+  width:50%;
+}
+
+.facebookIcon:hover{
+  display:inline-flex;
 }
