@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import TwitterLogo from "../static/images/iconmonstr-twitter-4.svg"
-import FacebookLogo from "../static/images/iconmonstr-facebook-4.svg"
 
 class VoteResult extends Component {
-	constructor(props) {
-		super(props);
-	}
-
     render() {
 		return (
 			<div className="voteResult">
